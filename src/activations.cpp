@@ -1,4 +1,4 @@
-#include "nn/activations.hpp"
+#include "activations.hpp"
 
 #include <cmath>
 #include <stdexcept>
