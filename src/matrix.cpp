@@ -1,4 +1,4 @@
-#include "nn/matrix.hpp"
+#include "matrix.hpp"
 
 #include <algorithm>
 #include <cmath>
