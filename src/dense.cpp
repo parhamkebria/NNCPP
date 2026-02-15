@@ -1,19 +1,19 @@
-#include "nn/dense.hpp"
+#include "dense.hpp"
 
 #include <cmath>
 #include <stdexcept>
 
-#include "nn/optimizer.hpp"
+#include "optimizer.hpp"
 
 namespace nn {
 
 DenseLayer::DenseLayer(std::size_t inputSize, std::size_t outputSize)
     : weights_(Matrix::random(inputSize, outputSize,
-                              -std::sqrt(2.0 / static_cast<double>(inputSize)),
-                              std::sqrt(2.0 / static_cast<double>(inputSize)))),
-      biases_(Matrix::zeros(1, outputSize)),
-      gradWeights_(Matrix::zeros(inputSize, outputSize)),
-      gradBiases_(Matrix::zeros(1, outputSize)) {}
+                            -std::sqrt(2.0 / static_cast<double>(inputSize)),
+                            std::sqrt(2.0 / static_cast<double>(inputSize)))),
+    biases_(Matrix::zeros(1, outputSize)),
+    gradWeights_(Matrix::zeros(inputSize, outputSize)),
+    gradBiases_(Matrix::zeros(1, outputSize)) {}
 
 Matrix DenseLayer::forward(const Matrix& input) {
     if (input.cols() != weights_.rows()) {
