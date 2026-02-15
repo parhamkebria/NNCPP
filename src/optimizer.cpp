@@ -1,4 +1,4 @@
-#include "nn/optimizer.hpp"
+#include "optimizer.hpp"
 
 namespace nn {
 
