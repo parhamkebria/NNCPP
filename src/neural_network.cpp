@@ -1,4 +1,4 @@
-#include "nn/neural_network.hpp"
+#include "neural_network.hpp"
 
 #include <iostream>
 #include <stdexcept>
